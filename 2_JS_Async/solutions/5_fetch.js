@@ -41,7 +41,7 @@ const fetch = require("node-fetch");
 const ENDPOINT = "https://swapi.dev/api/";
 
 // Change me.
-let query = 'YOU_NEED_TO_CHANGE_THIS';
+let query = 'people/1';
 
 fetch(ENDPOINT + query)
   .then(res => {

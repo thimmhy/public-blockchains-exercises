@@ -26,7 +26,7 @@ const ethers = require("ethers");
 
 const providerKey = process.env.INFURA_KEY;
 
-const goerliInfuraUrl = `${process.env.INFURA_GOERLI}${providerKey}`;
+const goerliInfuraUrl = `${process.env.INFURA_GOERLI_API_URL}${providerKey}`;
 const goerliProvider = new ethers.JsonRpcProvider(goerliInfuraUrl);
 
 // Exercise 1. Create a Signer.
@@ -96,7 +96,7 @@ const connect = async() => {
     console.log('The nonce is', nonce);
 };
 
-// connect();
+connect();
 
 // c. Replace the signer created above at exercise 1 with one that takes the 
 // Goerli provider as second parameter. This is necessary even
@@ -155,7 +155,7 @@ const sendTransaction = async () => {
     console.log('Balance for', account2, 'changed from', b2, 'to', updatedB2);
 };
 
-// sendTransaction();
+ sendTransaction();
 
 
 // Exercise 5. Meddling with Gas.
@@ -351,4 +351,4 @@ const resubmitTransaction = async () => {
 
 };
 
-resubmitTransaction();
+// resubmitTransaction();

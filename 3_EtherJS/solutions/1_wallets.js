@@ -106,7 +106,7 @@ exercise = 1;
 
 require('dotenv').config();
 
-// exit();
+//exit();
 
 // Exercise 2. Create .env file.
 ////////////////////////////////
@@ -143,7 +143,7 @@ exercise = '3a';
 // if statement that print a warning message if empty.
 console.log(process.env.METAMASK_ACCOUNT_1);
 
-let privateKey = process.env.METAMASK_PRIVATE_KEY;
+let privateKey = process.env.METAMASK_1_PRIVATE_KEY;
 if (privateKey === "") {
     console.log('Missing private key, fix your .env file');
 }

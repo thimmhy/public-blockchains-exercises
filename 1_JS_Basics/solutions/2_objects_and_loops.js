@@ -86,7 +86,7 @@ console.log(persons);
 
 // b. Count how many elements are in the array.
 console.log(persons.length);
-
+    
 // c. Access the second element of the array.
 console.log(persons[1]);
 // Arrays are 0-indexed, that is the first element has index 0,

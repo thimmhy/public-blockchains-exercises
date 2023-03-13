@@ -13,6 +13,7 @@
 // Hint: As you did in file 1_wallet.
 
 // Require packages.
+
 require('dotenv').config();
 const ethers = require("ethers");
 
@@ -44,11 +45,11 @@ const ethers = require("ethers");
 // parameters it needs (nested hint: you need something from the .env file).
 
 const providerKey = process.env.INFURA_KEY;
-
-const mainnetInfuraUrl = `${process.env.INFURA_MAINNET}${providerKey}`;
-// console.log(mainnetInfuraUrl);
+console.log(providerKey);
+const mainnetInfuraUrl = `${process.env.INFURA_MAINNET_API_URL}${providerKey}`;
+console.log(mainnetInfuraUrl);
 const mainnetProvider = new ethers.JsonRpcProvider(mainnetInfuraUrl);
-
+console.log(mainnetProvider);
 // b. Verify that the network's name is "mainnet" and the chain id that theis 1.
 
 // Hint: the value of chain id returned by Ethers JS is of type "BigInt". 
@@ -120,7 +121,7 @@ const blockNum = async () => {
 // Connect to the Goerli test net, get the latest block number and print
 // the difference in chain length with mainnet.
 
-const goerliInfuraUrl = `${process.env.INFURA_GOERLI}${providerKey}`;
+const goerliInfuraUrl = `${process.env.INFURA_GOERLI_API_URL}${providerKey}`;
 // console.log(goerliInfuraUrl);
 const goerliProvider = new ethers.JsonRpcProvider(goerliInfuraUrl);
 
@@ -327,7 +328,7 @@ const balance = async (ensName = "unima.eth") => {
 
 };
 
-// balance("vitalik.eth");
+//balance();
 
 
 // Exercise 7. Get ERC20 Balance.
@@ -364,6 +365,6 @@ const link = async () => {
 };
 
 
-// link();
+link();
 
 
